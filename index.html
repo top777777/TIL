@@ -2,10 +2,19 @@
 <html lang="en">
 
 <body>
-  <div id="root"></div>
+  <button id="btn">Click ME ~</button>
+  <span>Counter : 0</span>
 </body>
-<script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+<script>
+  let counter = 0;
+  const button = document.getElementById('btn');
+  const span = document.querySelector('span');
 
+  function handleClick() {
+    counter = counter + 1;
+    span.innerText = `Counter : ${counter}`;
+  }
+
+  button.addEventListener('click', handleClick);
 </script>
 </html>
